@@ -26,7 +26,6 @@ import jobRoute from "./routes/jobRoutes.js"
 //dotenv config
 dotenv.config()
 connectDB()
-app.use(cors())
 
 //swagger API config
 //swagger api options
@@ -55,6 +54,7 @@ const spec = swaggerDoc(options)
 //REST object
 const app = express()
 
+app.use(cors())
 
 //some useful functions
 app.use(helmet())
