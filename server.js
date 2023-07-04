@@ -26,6 +26,7 @@ import jobRoute from "./routes/jobRoutes.js"
 //dotenv config
 dotenv.config()
 connectDB()
+app.use(cors())
 
 //swagger API config
 //swagger api options
@@ -38,8 +39,9 @@ const options = {
         },
         servers: [
             {
-               // url: "http://localhost:8080"
+                  url: "http://localhost:8080",
                   url: "https://nodejs-job-portal-app-g9pe.onrender.com"
+                
             }
         ]
     },
@@ -58,7 +60,6 @@ const app = express()
 app.use(helmet())
 app.use(xss())
 app.use(mongoSanitize());
-app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
 
