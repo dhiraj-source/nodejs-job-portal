@@ -38,7 +38,8 @@ const options = {
         },
         servers: [
             {
-                url: "http://localhost:8080"
+               // url: "http://localhost:8080"
+                  url: "https://nodejs-job-portal-app-g9pe.onrender.com"
             }
         ]
     },
