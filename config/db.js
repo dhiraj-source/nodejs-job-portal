@@ -4,10 +4,10 @@ import mongoose from "mongoose";
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URL)
-        // console.log(`database succesfully conneccted to host ${mongoose.connection.host}`.bgYellow.black)
+         console.log(`database succesfully conneccted to host ${mongoose.connection.host}`.bgYellow.black)
     } catch (error) {
         error
-        // console.log(error)
+         console.log(error)
     }
 
 }
